@@ -29,7 +29,7 @@ void metodeTabel()
   {
     double h = (double)(x2 - x1) / n;
     double x = (double)x1 + (i * h);
-    // f(x) = x^3 - 4x - 9
+
     double fungsi = (double)((a * (x * x)) + (b * x) + c);
     double error = fabs(fungsi);
     if (error <= result)
