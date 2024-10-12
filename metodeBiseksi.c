@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <conio.h>
 #include <math.h>
+#include <conio.h>
+#include <stdlib.h>
 
 // X Awal = 2.5
 // X Akhir = 2.6
@@ -16,26 +16,26 @@ int main(){
   float x, y, z, e;
   system("cls");
   printf("==================================================================\n");
-  printf("|                      Metode Newton Rahpson                     |\n");
+  printf("|                         Metode Biseksi                         |\n");
   printf("==================================================================\n");
   printf("> Masukan Nilai X Awal: ");
   scanf("%f", &x);
   printf("\n> Masukan Nilai X Akhir: ");
   scanf("%f", &y);
-  printf("\n> Masukan Batasan Error: ");
+  printf("\n> Masukan Batas Error: ");
   scanf("%f", &e);
   printf("==================================================================");
   getch();
 
   system("cls");
   printf("==================================================================\n");
-  printf("|                      Metode Newton Rahpson                     |\n");
+  printf("|                         Metode Biseksi                         |\n");
   printf("==================================================================\n");
   printf("|i|    x    |    y    |    z    |   f(x)   |   f(y)   |   f(z)   |\n");
   printf("------------------------------------------------------------------\n");
   do {
     i++;
-    z = x - (fungsi(x) * ((y - x) / (fungsi(y) - fungsi(x))));
+    z = (x + y) / 2;
     printf("|%d|  %.4f |  %.4f |  %.4f ", i, x, y, z);
     (fungsi(x) > 0) ? printf("|  %.4f  ",  fungsi(x)) : printf("|  %.4f ",  fungsi(x));
     (fungsi(y) > 0) ? printf("|  %.4f  ",  fungsi(y)) : printf("| %.4f  ",  fungsi(y));
